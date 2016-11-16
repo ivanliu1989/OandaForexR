@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(httr)\n\nAccountType = \"practice\"\nToken = '450188cd62d103f23afbbee7e72b1339-d9c47c032f04ff46a65ec24786d11357'\nAccountID = '101-011-4686012-001'\nHeaders = add_headers(Authorization = paste(\"Bearer\",Token,sep=\" \"), \"Content-Type\" = \"application/json\")\n\nhttpaccount <- \"https://api-fxpractice.oanda.com\"\nQueryhttp  <- paste(httpaccount,\"/v3/accounts/\",sep=\"\")\nQueryhttp1 <- paste(Queryhttp,AccountID,sep=\"\")\nQueryhttp2 <- paste(Queryhttp1,\"/orders\",sep=\"\")\n\nPOST(Queryhttp2, config = Headers,\n     body = list(order = list(units = '999',\n                              instrument = 'EUR_USD',\n                              timeInForce = 'FOK',\n                              type = 'MARKET',\n                              positionFill = 'DEFAULT')),\n     encode = \"json\")\n",
+    "created" : 1479286608207.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3064705102",
+    "id" : "69D14051",
+    "lastKnownWriteTime" : 1479286629,
+    "last_content_update" : 1479286629860,
+    "path" : "C:/Users/sky_x/Google Drive/1. Work In Progress/Git Projects/OandaForexR/R/OandaAccount.R",
+    "project_path" : "R/OandaAccount.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
