@@ -63,10 +63,11 @@ for(i in 1:10000){
   library(data.table)
   library(xts)
 
-  cat(paste0('Iter: ', i, '\n'))
+  ACCOUNT_ID = '101-011-4686012-002'
+  cat(paste0('Iter: ', i, ' | ', Sys.time(),'\n'))
 
-  AUDUSD = getCandles(ACCOUNT_TYPE, ACCESS_TOKEN, INSTRUMENTS = 'AUD_USD', price = 'MBA', granularity = 'M1', count = 3000)
-  USDCAD = getCandles(ACCOUNT_TYPE, ACCESS_TOKEN, INSTRUMENTS = 'USD_CAD', price = 'MBA', granularity = 'M1', count = 3000)
+  AUDUSD = getCandles(ACCOUNT_TYPE, ACCESS_TOKEN, INSTRUMENTS = 'AUD_USD', price = 'M', granularity = 'M5', count = 1000)
+  USDCAD = getCandles(ACCOUNT_TYPE, ACCESS_TOKEN, INSTRUMENTS = 'USD_CAD', price = 'M', granularity = 'M5', count = 1000)
 
   AUDUSD.M = AUDUSD[, c('time', 'mid.c')]
   USDCAD.M = USDCAD[, c('time', 'mid.c')]
@@ -78,7 +79,7 @@ for(i in 1:10000){
   pairs <- na.omit(merge(y, x))
   price.ratio = getPriceRatio(y, x, FALSE)
 
-  half.life <- 1000
+  half.life <- 300
 
   zc <- zscores(price.ratio)
   indicator <- as.numeric(tail(zc,1))
@@ -119,5 +120,5 @@ for(i in 1:10000){
     if(CAD.short < 0) createMarketOrder(ACCOUNT_TYPE, ACCESS_TOKEN, ACCOUNT_ID, INSTRUMENTS = 'USD_CAD', UNITS = -CAD.short)
   }
 
-  Sys.sleep(60)
+  Sys.sleep(300)
 }

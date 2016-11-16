@@ -16,10 +16,11 @@ for(i in 1:10000){
   library(lattice)
   library(timeSeries)
   library(rugarch)
+  ACCOUNT_ID = '101-011-4686012-003'
 
   cat(paste0('Iter: ', i, '\n'))
 
-  AUDUSD = getCandles(ACCOUNT_TYPE, ACCESS_TOKEN, INSTRUMENTS = 'AUD_USD', price = 'M', granularity = 'M1', count = 500)
+  AUDUSD = getCandles(ACCOUNT_TYPE, ACCESS_TOKEN, INSTRUMENTS = 'AUD_USD', price = 'M', granularity = 'M5', count = 500)
 
   AUDUSD.M = AUDUSD[, c('time', 'mid.c')]
 
