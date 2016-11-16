@@ -1,4 +1,4 @@
-source("./R/settings.R")
+# source("./R/settings.R")
 
 # getTrades(ACCOUNT_TYPE, ACCESS_TOKEN, ACCOUNT_ID, INSTRUMENTS = 'USD_CAD')
 getTrades <- function(ACCOUNT_TYPE, ACCESS_TOKEN, ACCOUNT_ID, INSTRUMENTS = 'AUD_USD'){

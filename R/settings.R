@@ -1,6 +1,14 @@
 library(httr)
 library(jsonlite)
 library(RCurl)
+source('./R/OandaAccount.R')
+source('./R/OandaForexLabs.R')
+source('./R/OandaInstrument.R')
+source('./R/OandaOrders.R')
+source('./R/OandaPositions.R')
+source('./R/OandaPricing.R')
+source('./R/OandaTrades.R')
+source('./R/OandaTransactions.R')
 
 ACCOUNT_TYPE = 'practice'
 
@@ -24,8 +32,9 @@ API_DOMAIN = ENVIRONMENTS$api[ACCOUNT_TYPE]
 ACCESS_TOKEN = '450188cd62d103f23afbbee7e72b1339-d9c47c032f04ff46a65ec24786d11357'
 ACCOUNT_ID = '101-011-4686012-001'
 
+RISK_MANAGEMENT = 0.02
 
-
+INIT_AMOUNT = 1000000
 
 #
 # AccountType = "practice"

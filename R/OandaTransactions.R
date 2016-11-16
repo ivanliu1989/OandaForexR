@@ -1,4 +1,4 @@
-source("./R/settings.R")
+# source("./R/settings.R")
 
 # getTransactions(ACCOUNT_TYPE, ACCESS_TOKEN, ACCOUNT_ID)
 getTransactions <- function(ACCOUNT_TYPE, ACCESS_TOKEN, ACCOUNT_ID, PAGESIZE = 1000, FROM = NULL, TO = NULL){

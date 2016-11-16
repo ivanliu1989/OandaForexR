@@ -1,4 +1,4 @@
-source("./R/settings.R")
+# source("./R/settings.R")
 
 # dat = getCandles(ACCOUNT_TYPE, ACCESS_TOKEN, INSTRUMENTS = 'AUD_USD', price = 'BA', granularity = 'M5', count = 500)
 

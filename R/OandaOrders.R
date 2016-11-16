@@ -1,4 +1,4 @@
-source("./R/settings.R")
+# source("./R/settings.R")
 
 # createMarketOrder(ACCOUNT_TYPE, ACCESS_TOKEN, ACCOUNT_ID, INSTRUMENTS = 'AUD_USD', UNITS = -10000)
 
@@ -27,9 +27,9 @@ createMarketOrder <- function(ACCOUNT_TYPE, ACCESS_TOKEN, ACCOUNT_ID, INSTRUMENT
   }, error = function(e) e)
 
   if(resp$status_code == 201) {
-    cat("HTTP 201 – The Order was created as specified")
+    cat("HTTP 201 – The Order was created as specified\n")
   }else{
-    cat(paste0(resp$status_code, " | Failed to create order!"))
+    cat(paste0(resp$status_code, " | Failed to create order!\n"))
   }
 
   return(resp)

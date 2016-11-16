@@ -1,4 +1,4 @@
-source("./R/settings.R")
+# source("./R/settings.R")
 
 # getPositions(ACCOUNT_TYPE, ACCESS_TOKEN, ACCOUNT_ID)
 getPositions <- function(ACCOUNT_TYPE, ACCESS_TOKEN, ACCOUNT_ID){

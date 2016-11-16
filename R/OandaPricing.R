@@ -1,4 +1,4 @@
-source("./R/settings.R")
+# source("./R/settings.R")
 
 # getCurrentPricing(ACCOUNT_TYPE, ACCESS_TOKEN, ACCOUNT_ID, 'AUD_USD')
 
