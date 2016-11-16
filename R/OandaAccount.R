@@ -1,4 +1,4 @@
-library(httr)
+source("./R/settings.R")
 
 AccountType = "practice"
 Token = '450188cd62d103f23afbbee7e72b1339-d9c47c032f04ff46a65ec24786d11357'
